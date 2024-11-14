@@ -1,0 +1,150 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+}
+
+body {
+   display: flex;
+}
+
+.flex-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.page-L {
+   width: 50%;
+   height: 100%;
+   margin-right: 0;
+   background: url('background2.jpg');
+   background-size: cover;
+}
+
+.page-R {
+   width: 100%;
+   font-size: 10px;
+}
+
+.page-RT {
+   height: 40%;
+   margin-bottom: 0;
+}
+
+.icon {
+   width: 45em;
+}
+
+.icon2 {
+   width: 2.5em;
+}
+
+.page-RM {
+   height: 60%;
+   background-color: #99d2bd;
+   display: flex;
+   flex-direction: column; /* 垂直排列 */
+   align-items: center; /* 水平居中 */
+   justify-content: center; /* 垂直居中 */
+}
+
+.title {
+   color: #FFFFFF;
+   font-weight: 600;
+
+   width: 100%;
+   display: flex;
+   font-size: 3.5em;
+   margin-bottom: 1.5em;
+}
+
+.toMeet-btn {
+   font-size: 2em;
+   padding: 1.5em;
+   font-weight: 600;
+   margin-right: 3em;
+   text-decoration: none;
+
+   color: #FFFFFF;
+   background-color: #f56d6d;
+   border-radius: 1em;
+}
+
+.toMeet-btn:hover {
+   background-color: #dc3434;
+}
+
+.toRepair-btn {
+   font-size: 2em;
+   padding: 1.5em;
+   font-weight: 600;
+   margin-left: 3em;
+   text-decoration: none;
+
+   color: #FFFFFF;
+   background-color: #f7a15a;
+   border-radius: 1em;
+}
+
+.toRepair-btn:hover {
+   background-color: #e78433;
+}
+
+@media screen and (max-width: 1600px) {
+   .icon {
+      width: 55em;
+   }   
+
+   .title {
+      font-size: 4.35em;
+   }
+
+   .toMeet-btn {
+      font-size: 2.7em;
+   }
+
+   .toRepair-btn {
+      font-size: 2.7em;
+   }
+}
+
+@media screen and (max-width: 1500px) {
+   .icon {
+      width: 50em;
+   }
+
+   .title {
+      font-size: 3.9em;
+   }
+   
+   .toMeet-btn {
+      font-size: 2.4em;
+   }
+
+   .toRepair-btn {
+      font-size: 2.4em;
+   }
+}
+
+@media screen and (max-width: 1300px) {
+   .icon {
+      width: 45em;
+   }
+   
+   .title {
+      font-size: 3.5em;
+   }
+   
+   .toMeet-btn {
+      font-size: 2.15em;
+   }
+
+   .toRepair-btn {
+      font-size: 2.15em;
+   }
+}
