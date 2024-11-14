@@ -59,20 +59,39 @@ body {
 
    width: 100%;
    display: flex;
-   font-size: 3.25em;
-   margin-bottom: 1.5em;
+   font-size: 5em;
+   margin-bottom: 0.5em;
+}
+
+.title_eng {
+   color: #FFFFFF;
+   font-weight: 600;
+
+   width: 100%;
+   display: flex;
+   font-size: 4em;
+   margin-bottom: 1em;
 }
 
 .toMeet-btn {
-   font-size: 2em;
+   width: 6.5em;
+   height: 6.5em;
    padding: 1.5em;
    font-weight: 600;
    margin-right: 3em;
    text-decoration: none;
 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
    color: #FFFFFF;
    background-color: #f56d6d;
    border-radius: 1em;
+}
+
+.toMeet-btn p {
+   font-size: 30px;
 }
 
 .toMeet-btn:hover {
@@ -80,15 +99,25 @@ body {
 }
 
 .toRepair-btn {
-   font-size: 2em;
+   width: 6.5em !important;
+   height: 6.5em !important;
    padding: 1.5em;
    font-weight: 600;
-   margin-left: 3em;
+   margin-left: 2em;
    text-decoration: none;
+
+   display: flex;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
 
    color: #FFFFFF;
    background-color: #f7a15a;
    border-radius: 1em;
+}
+
+.toRepair-btn p {
+   font-size: 20px;
 }
 
 .toRepair-btn:hover {
@@ -104,9 +133,9 @@ body {
       width: 55em;
    }   
 
-   .title {
+   /* .title {
       font-size: 4.15em;
-   }
+   } */
 
    .toMeet-btn {
       font-size: 2.7em;
@@ -122,9 +151,9 @@ body {
       width: 50em;
    }
 
-   .title {
+   /* .title {
       font-size: 3.75em;
-   }
+   } */
    
    .toMeet-btn {
       font-size: 2.4em;
@@ -140,9 +169,9 @@ body {
       width: 45em;
    }
    
-   .title {
+   /* .title {
       font-size: 3.35em;
-   }
+   } */
    
    .toMeet-btn {
       font-size: 2.15em;
