@@ -22,8 +22,35 @@ body {
    width: 50%;
    height: 100%;
    margin-right: 0;
+   background-size: cover !important;
    background: url('background2.jpg');
-   background-size: cover;
+}
+
+.language-container {
+   margin: 1em;
+   font-size: 1.8em;
+   font-weight: 600;
+   color: #FFFFFF;
+}
+
+.lang-chinese {
+   margin-right: 1em;
+}
+
+.L-btn-container {
+   display: flex;
+   flex-direction: column; /* 垂直排列 */
+   align-items: center; /* 水平居中 */
+   justify-content: center; /* 垂直居中 */
+}
+
+.L-button {
+   bottom: 0;
+   font-weight: 600;
+   font-size: 1.8em;
+   color: #FFFFFF;
+   position: absolute;
+   margin-bottom: 1.5em;
 }
 
 .page-R {
@@ -37,11 +64,12 @@ body {
 }
 
 .icon {
-   width: 45em;
+   width: 45em !important;
+   margin-right: 5em;
 }
 
 .icon2 {
-   width: 2.5em;
+   width: 25em;
 }
 
 .page-RM {
@@ -69,21 +97,38 @@ body {
 
    width: 100%;
    display: flex;
-   font-size: 4em;
+   
    margin-bottom: 1em;
 }
 
-.toMeet-btn {
-   width: 6.5em;
-   height: 6.5em;
-   padding: 1.5em;
+.RM-1stTitle {
+   margin-right: 0.5em;
+   text-shadow: 1px 1px 2px rgb(89, 86, 86);
+}
+
+.RM-2ndTitle {
+   font-size: 5em;
    font-weight: 600;
-   margin-right: 3em;
+   color: #ff0000;
+   text-shadow: 1px 1px 2px rgb(89, 86, 86);
+}
+
+.RM-3rdTitle {
+   font-size: 5em;
+   font-weight: 600;
+   text-shadow: 1px 1px 2px rgb(89, 86, 86);
+}
+
+.toMeet-btn {
+   width: 10em;
+   height: 6em;
+   font-weight: 600;
+   margin: 1em 2.3em 0em;
    text-decoration: none;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   display: grid;
+   text-align: center;
+   place-content: center;
    
    color: #FFFFFF;
    background-color: #f56d6d;
@@ -91,7 +136,11 @@ body {
 }
 
 .toMeet-btn p {
-   font-size: 30px;
+   font-size: 35px;
+}
+
+.toMeet-btn .step1 {
+   text-shadow: 1px 1px 2px rgb(89, 86, 86);
 }
 
 .toMeet-btn:hover {
@@ -99,17 +148,15 @@ body {
 }
 
 .toRepair-btn {
-   width: 6.5em !important;
-   height: 6.5em !important;
-   padding: 1.5em;
+   width: 10em;
+   height: 6em;
    font-weight: 600;
-   margin-left: 2em;
+   margin: 1em 2.3em 0em;
    text-decoration: none;
 
-   display: flex;
+   display: grid;
    text-align: center;
-   align-items: center;
-   justify-content: center;
+   place-content: center;
 
    color: #FFFFFF;
    background-color: #f7a15a;
@@ -117,15 +164,15 @@ body {
 }
 
 .toRepair-btn p {
-   font-size: 20px;
+   font-size: 35px;
+}
+
+.toRepair-btn .step2 {
+   text-shadow: 1px 1px 2px rgb(89, 86, 86);
 }
 
 .toRepair-btn:hover {
    background-color: #e78433;
-}
-
-.string_welcome {
-   margin-right: 0.5em;
 }
 
 @media screen and (max-width: 1600px) {
