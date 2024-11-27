@@ -23,12 +23,12 @@ body {
    height: 100%;
    margin-right: 0;
    background-size: cover !important;
-   background: url('background2.jpg');
+   background: url('./image/background2.jpg');
 }
 
 .language-container {
    margin: 1em;
-   font-size: 1.8em;
+   font-size: 2em;
    font-weight: 600;
    color: #FFFFFF;
 }
@@ -39,15 +39,15 @@ body {
 
 .L-btn-container {
    display: flex;
-   flex-direction: column; /* 垂直排列 */
-   align-items: center; /* 水平居中 */
-   justify-content: center; /* 垂直居中 */
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
 }
 
 .L-button {
    bottom: 0;
+   font-size: 2em;
    font-weight: 600;
-   font-size: 1.8em;
    color: #FFFFFF;
    position: absolute;
    margin-bottom: 1.5em;
@@ -64,21 +64,21 @@ body {
 }
 
 .icon {
-   width: 45em !important;
-   margin-right: 5em;
+   width: 50em;
+   margin-right: 5.5em;
 }
 
 .icon2 {
-   width: 25em;
+   width: 28em;
 }
 
 .page-RM {
    height: 65%;
-   background-color: #99d2bd;
    display: flex;
-   flex-direction: column; /* 垂直排列 */
-   align-items: center; /* 水平居中 */
-   justify-content: center; /* 垂直居中 */
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #99d2bd;
 }
 
 .title {
@@ -87,18 +87,8 @@ body {
 
    width: 100%;
    display: flex;
-   font-size: 5em;
+   font-size: 5.5em;
    margin-bottom: 0.5em;
-}
-
-.title_eng {
-   color: #FFFFFF;
-   font-weight: 600;
-
-   width: 100%;
-   display: flex;
-   
-   margin-bottom: 1em;
 }
 
 .RM-1stTitle {
@@ -107,14 +97,12 @@ body {
 }
 
 .RM-2ndTitle {
-   font-size: 5em;
    font-weight: 600;
    color: #ff0000;
    text-shadow: 1px 1px 2px rgb(89, 86, 86);
 }
 
 .RM-3rdTitle {
-   font-size: 5em;
    font-weight: 600;
    text-shadow: 1px 1px 2px rgb(89, 86, 86);
 }
@@ -123,7 +111,8 @@ body {
    width: 10em;
    height: 6em;
    font-weight: 600;
-   margin: 1em 2.3em 0em;
+   font-size: 2.35em;
+   margin: 0.5em 2.3em 0em;
    text-decoration: none;
 
    display: grid;
@@ -151,7 +140,8 @@ body {
    width: 10em;
    height: 6em;
    font-weight: 600;
-   margin: 1em 2.3em 0em;
+   font-size: 2.35em;
+   margin: 0.5em 2.3em 0em;
    text-decoration: none;
 
    display: grid;
@@ -175,56 +165,278 @@ body {
    background-color: #e78433;
 }
 
+@media screen and (max-width: 2600px) {
+   .language-container {
+      font-size: 2em;
+   }
+
+   .L-button {
+      font-size: 2em;
+   }
+
+   .icon {
+      width: 50em !important;
+      margin-right: 5.5em;
+   }
+   
+   .icon2 {
+      width: 28em;
+   }
+
+   .title {
+      font-size: 5.5em;
+   }
+
+   .toMeet-btn {
+      font-size: 2.35em;
+      margin: 0.5em 2.3em 0em;
+   }
+
+   .toRepair-btn {
+      font-size: 2.35em;
+      margin: 0.5em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 40px;
+   }
+
+   .toRepair-btn p {
+      font-size: 40px;
+   }
+}
+
 @media screen and (max-width: 1600px) {
-   .icon {
-      width: 55em;
-   }   
+   .language-container {
+      font-size: 2.25em;
+   }
 
-   /* .title {
-      font-size: 4.15em;
-   } */
+   .L-button {
+      font-weight: 600;
+      font-size: 2.25em;
+   }
+
+   .icon {
+      width: 56em !important;
+      margin-right: 6.3em;
+   }
+   
+   .icon2 {
+      width: 32em;
+   }
+
+   .title {
+      font-size: 6.2em;
+   }
+
+   .RM-1stTitle {
+      margin-top: -0.25em;
+   }
 
    .toMeet-btn {
-      font-size: 2.7em;
+      font-size: 2.65em;
+      margin: 0.5em 2.3em 0em;
    }
 
    .toRepair-btn {
-      font-size: 2.7em;
+      font-size: 2.65em;
+      margin: 0.5em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 43px;
+   }
+
+   .toRepair-btn p {
+      font-size: 43px;
    }
 }
 
-@media screen and (max-width: 1500px) {
-   .icon {
-      width: 50em;
+@media screen and (max-width: 1500px) { 
+   .language-container {
+      font-size: 2em;
    }
 
-   /* .title {
-      font-size: 3.75em;
-   } */
+   .L-button {
+      font-weight: 600;
+      font-size: 2em;
+   }
+
+   .icon {
+      width: 50em !important;
+      margin-right: 5.5em;
+   }
    
+   .icon2 {
+      width: 28em;
+   }
+
+   .title {
+      font-size: 5.55em;
+   }
+
+   .RM-1stTitle {
+      margin-top: -0.15em;
+   }
+
    .toMeet-btn {
       font-size: 2.4em;
+      margin: 0.5em 2.3em 0em;
    }
 
    .toRepair-btn {
       font-size: 2.4em;
+      margin: 0.5em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 38.5px;
+   }
+
+   .toRepair-btn p {
+      font-size: 38.5px;
    }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) { 
+   .language-container {
+      margin: 1em;
+      font-size: 1.8em;
+   }
+
+   .L-button {
+      font-weight: 600;
+      font-size: 1.8em;
+   }
+
    .icon {
-      width: 45em;
+      width: 45em !important;
+      margin-right: 5em;
    }
    
-   /* .title {
-      font-size: 3.35em;
-   } */
-   
+   .icon2 {
+      width: 25em;
+   }
+
+   .title {
+      font-size: 5em;
+      margin-bottom: 0.5em;
+   }
+
+   .RM-1stTitle {
+      margin-top: 0em;
+   }
+
    .toMeet-btn {
       font-size: 2.15em;
+      margin: 0.5em 2.3em 0em;
    }
 
    .toRepair-btn {
       font-size: 2.15em;
+      margin: 0.5em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 35px;
+   }
+
+   .toRepair-btn p {
+      font-size: 35px;
    }
 }
+
+@media screen and (max-width: 1200px) { 
+   .language-container {
+      /* margin: 1.05em; */
+      font-size: 1.635em;
+   }
+
+   .L-button {
+      font-size: 1.635em;
+   }
+
+   .icon {
+      width: 41em !important;
+      margin-right: 4.2em;
+   }
+
+   .icon2 {
+      width: 22em;
+   }
+
+   .title { 
+      font-size: 4.6em;
+   }
+
+   .toMeet-btn {
+      font-size: 1.95em;
+      margin: 0.35em 2.3em 0em;
+   }
+
+   .toRepair-btn {
+      font-size: 1.95em;
+      margin: 0.35em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 32px;
+   }
+
+   .toRepair-btn p {
+      font-size: 32px;
+   }
+   
+}
+
+@media screen and (max-width: 1100px) { 
+   .page-L {
+      width: 33.35%;
+   }
+
+   .title { 
+      font-size: 4.05em;
+   }
+
+   .language-container {
+      font-size: 1.435em;
+   }
+
+   .L-button {
+      font-size: 1.435em;
+   }
+
+   .page-R {
+      width: 66.65%;
+      font-size: 10px;
+   }
+
+   .icon {
+      width: 36em !important;
+      margin-right: 3.7em;
+   }
+
+   .icon2 {
+      width: 19.65em;
+   }
+   
+   .toMeet-btn {
+      font-size: 1.73em;
+      margin: 0.25em 2.3em 0em;
+   }
+
+   .toRepair-btn {
+      font-size: 1.73em;
+      margin: 0.25em 2.3em 0em;
+   }
+
+   .toMeet-btn p {
+      font-size: 28px;
+   }
+
+   .toRepair-btn p {
+      font-size: 28px;
+   }
+
+}
+
