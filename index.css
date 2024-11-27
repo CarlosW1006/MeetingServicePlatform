@@ -23,7 +23,7 @@ body {
    height: 100%;
    margin-right: 0;
    background-size: cover !important;
-   background: url('./image/background2.jpg');
+   background: url('./image/background.jpg');
 }
 
 .language-container {
