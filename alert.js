@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const verifyBtn = document.getElementById('verify-btn');
    const webNotify = document.getElementById('web-notify');
    const acceptBtn = document.getElementById('accept-btn');
+   const renewExtensionBtn = document.getElementById('renewExtension-btn');
 
    closeBtn.addEventListener('click', function() {
       webNotify.style.visibility = "hidden";
@@ -11,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
    verifyBtn.addEventListener('click', function() {
       webNotify.style.visibility = "visible";
    });
+
+   renewExtensionBtn.addEventListener('click', function() {
+      webNotify.style.visibility = 'visible';
+   })
 
    acceptBtn.addEventListener('click', function() {
       window.open('https://topmeetingrtc.topoo.com.tw/5', '_blank');
