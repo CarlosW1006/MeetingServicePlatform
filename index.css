@@ -1,3 +1,44 @@
+.notify { 
+   width: 30em;
+   height: auto;
+   z-index: 999;
+   padding: 1.5em;
+   position: fixed;
+   visibility: hidden;
+   text-align: justify;
+   background-color: #FFFFFF;
+   box-shadow: 2px 2px 5px 5px #0005;
+
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.notify p { 
+   font-size: 1.25em;
+   margin-bottom: 25px;
+}
+
+.close-btn {
+   cursor: pointer;
+   margin-left: auto;
+   margin-right: 0;
+   margin-bottom: 1em;
+}
+
+.close-btn:hover {
+   color: #dc3434;
+}
+
+.accept-btn { 
+   cursor: pointer;
+   padding: 10px;
+   font-weight: 600;
+   color: #FFFFFF;
+   border-radius: 10px;
+   background-color: #fa9d50;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -10,101 +51,365 @@ html, body {
 
 body {
    display: flex;
+   font-family: sans-serif;
 }
 
 .flex-container {
    display: flex;
    align-items: center;
-   justify-content: center;
+   /* justify-content: center; */
+}
+
+.bg {
+   background-size: cover !important;
+   background: url('./image/bg.png');
 }
 
 .page-L {
    width: 50%;
    height: 100%;
    margin-right: 0;
-   background-size: cover !important;
-   background: url('./image/background.jpg');
 }
 
-.language-container {
-   margin: 1em;
-   font-size: 2em;
-   font-weight: 600;
-   color: #FFFFFF;
-}
-
-.lang-chinese {
-   margin-right: 1em;
-}
-
-.L-btn-container {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   justify-content: center;
-}
-
-.L-button {
-   bottom: 0;
-   font-size: 2em;
-   font-weight: 600;
-   color: #FFFFFF;
-   position: absolute;
-   margin-bottom: 1.5em;
-}
-
-.page-R {
-   width: 100%;
-   font-size: 10px;
-}
-
-.page-RT {
+.page-LT {
    height: 35%;
    margin-bottom: 0;
 }
 
 .icon {
-   width: 50em;
-   margin-right: 3.5em;
+   width: 18em;
+   margin-left: 5em;
+   margin-bottom: 5em;
 }
 
-.icon2 {
-   width: 28em;
+.icon3 {
+   width: 15em;
+   margin-left: 5em;
+   /* margin-bottom: 5em; */
 }
 
-.page-RM {
-   height: 65%;
+.icon3-en {
+   width: 25em;
+   margin-left: 5em;
+   /* margin-bottom: 5em; */
+}
+
+.newUser-title {
+   width: 100%;
+   z-index: 999;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   padding: 2.5px 5px 2.5px;
+   background-color: #f86b00;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.newUser-title p {
+   color: #FFFFFF;
+   font-size: 1.85em;
+   font-weight: 600;
+}
+
+.existUser-title {
+   width: 100%;
+   z-index: 999;
+   color: #FFFFFF;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   padding: 2.5px 5px 2.5px;
+   background-color: #f86b00;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.existUser-title p {
+   color: #FFFFFF;
+   font-size: 1.85em;
+   font-weight: 600;
+}
+
+.newUser-title-en {
+   width: 100%;
+   z-index: 999;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   padding: 5.25px 5px 5.25px;
+   background-color: #f86b00;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.newUser-title-en p {
+   color: #FFFFFF;
+   font-size: 1.85em;
+   font-weight: 600;
+}
+
+.existUser-title-en {
+   width: 100%;
+   z-index: 999;
+   color: #FFFFFF;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   padding: 5.25px 5px 5.25px;
+   background-color: #f86b00;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.existUser-title-en p {
+   color: #FFFFFF;
+   font-size: 1.85em;
+   font-weight: 600;
+}
+
+.newUser-btn-outline { 
+   padding: 5px;
+   width: 15em;
+   height: 13em;
+   margin-top: 2em;
+   margin-left: 6.5em;
+   border-radius: 25px;
+   border:#f86b00 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.existUser-btn-outline { 
+   padding: 5px;
+   width: 15em;
+   height: 13em;
+   margin-top: 2em;
+   margin-left: 3em;
+   border-radius: 25px;
+   border:#f86b00 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.newUser-btn { 
+   width: 14em;
+   height: 12em;
+   border-radius: 20px;
+   background-color: #ffd797;
+}
+
+.existUser-btn { 
+   width: 14em;
+   height: 12em;
+   border-radius: 20px;
+   background-color: #ffd797;
+}
+
+.inner-btn-container { 
+   height: 100%;
    display: flex;
    align-items: center;
    flex-direction: column;
    justify-content: center;
-   background-color: #99d2bd;
 }
 
-.title {
-   color: #FFFFFF;
+.inner-btn { 
+   width: 8em;
+   padding: 0.15em;
+   font-size: 1.5em;
    font-weight: 600;
+   border-radius: 30px;
 
-   width: 100%;
+   color: inherit;
+   cursor: pointer;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   border:#FFFFFF 2.5px solid;
+
    display: flex;
-   font-size: 5.5em;
-   margin-bottom: 0.5em;
+   align-items: center;
+   justify-content: center;
 }
 
-.RM-1stTitle {
-   margin-right: 0.5em;
-   text-shadow: 1px 1px 2px rgb(89, 86, 86);
-}
-
-.RM-2ndTitle {
+.inner-btn:hover { 
+   width: 8em;
+   font-size: 1.5em;
    font-weight: 600;
-   color: #ff0000;
-   text-shadow: 1px 1px 2px rgb(89, 86, 86);
+   color: #FFFFFF;
+   border-radius: 30px;
+   background-color: #679ae1;
+   border:#FFFFFF 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.RM-3rdTitle {
+.inner-btn-en { 
+   width: 10em;
+   padding: 0.15em 0.15em 0.15em;
+   font-size: 1.25em;
    font-weight: 600;
-   text-shadow: 1px 1px 2px rgb(89, 86, 86);
+   border-radius: 30px;
+
+   color: inherit;
+   cursor: pointer;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   border:#FFFFFF 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.inner-btn-en:hover { 
+   width: 10em;
+   padding: 0.15em 0.15em 0.15em;
+   font-size: 1.25em;
+   font-weight: 600;
+   color: #FFFFFF;
+   border-radius: 30px;
+   background-color: #679ae1;
+   border:#FFFFFF 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.inner-btn-en2 { 
+   width: 10em;
+   padding: 0.15em 0.15em 0.15em;
+   font-size: 1.35em;
+   font-weight: 600;
+   border-radius: 30px;
+
+   color: inherit;
+   cursor: pointer;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   border:#FFFFFF 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.inner-btn-en2:hover { 
+   width: 10em;
+   padding: 0.15em 0.15em 0.15em;
+   font-size: 1.35em;
+   font-weight: 600;
+   color: #FFFFFF;
+   border-radius: 30px;
+   background-color: #679ae1;
+   border:#FFFFFF 2.5px solid;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.greet-t {
+   color: #FFFFFF;
+   font-size: 2.3em;
+   margin-top: 1.3em;
+   margin-left: 2.8em;
+   font-weight: bold;
+}
+
+.greet-en {
+   color: #FFD69D;
+   font-size: 3.5em;
+   margin-top: 0.65em;
+   margin-left: 0.25em;
+   font-weight: 500;
+}
+
+.floor {
+   font-size: 3.2em;
+   margin-left: 2em;
+   margin-top: 0.35em;
+   font-weight: bold;
+}
+
+.platform {
+   color: #FFFFFF;
+   font-size: 3.2em;
+   margin-left: 0.5em;
+   margin-top: 0.35em;
+   font-weight: bold;
+}
+
+.callRepair-container {
+   display: flex;
+   margin-right: 10em;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.callRepair-button {
+   bottom: 0;
+   font-weight: 600;
+   color: #FFFFFF;
+   position: absolute;
+   margin-bottom: 1.2em;
+   margin-right: 5em;
+   padding: 10px 70px 10px;
+   background-color: #679ae1;
+   border-radius: 50px;
+   border:#FFFFFF 2.5px solid;
+   text-decoration: none;
+}
+
+.page-R {
+   width: 50%;
+   font-size: 10px;
+}
+
+.language-container {
+   position: absolute;
+   right: 0;
+   margin: 2.5em;
+   margin-right: 4em !important;
+   font-size: 2em;
+   font-weight: 600;
+   color: #679ae1;
+}
+
+.lang-t { 
+   color: inherit;
+   margin-right: 1em;
+   text-decoration: none;
+}
+
+.lang-eng { 
+   color: inherit;
+   text-decoration: none;
+}
+
+.icon2 { 
+   width: 95%;
+   margin-top: 10em;
+   margin-right: 10em;
+}
+
+.page-RM {
+   height: 90%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   /* background-color: #99c4d2; */
 }
 
 .toMeet-btn {
@@ -165,44 +470,18 @@ body {
    background-color: #e78433;
 }
 
-@media screen and (max-width: 2600px) {
-   .language-container {
-      font-size: 2em;
+@media screen and (max-width: 3600px) { 
+   .standard {
+      font-size: 1.85em;
    }
 
-   .L-button {
-      font-size: 2em;
-   }
-
-   .icon-container {
-      font-size: 1em;
-   }
-
-   .title-container {
-      font-size: 1em;
-   }
-
-   .btn-container {
-      font-size: 1em;
-   }
-}
-
-@media screen and (max-width: 1910px) {
    .language-container {
       font-size: 2.7em;
    }
 
-   .L-button {
+   .callRepair-container {
       font-weight: 600;
       font-size: 2.7em;
-   }
-
-   .icon-container {
-      font-size: 1.385em;
-   }
-
-   .title-container {
-      font-size: 1.32em;
    }
 
    .btn-container {
@@ -210,22 +489,37 @@ body {
    }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1910px) { 
+   .standard {
+      font-size: 1.385em;
+   }
+
+   .language-container {
+      font-size: 2.7em;
+   }
+
+   .callRepair-container {
+      font-weight: 600;
+      font-size: 2.7em;
+   }
+
+   .btn-container {
+      font-size: 1.285em;
+   }
+}
+
+@media screen and (max-width: 1700px) { 
+   .standard {
+      font-size: 1.23em;
+   }
+
    .language-container {
       font-size: 2.4em;
    }
 
-   .L-button {
+   .callRepair-container {
       font-weight: 600;
       font-size: 2.4em;
-   }
-
-   .icon-container {
-      font-size: 1.23em;
-   }
-
-   .title-container {
-      font-size: 1.173em;
    }
 
    .btn-container {
@@ -233,22 +527,18 @@ body {
    }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) { 
+   .standard {
+      font-size: 1.153em;
+   }
+
    .language-container {
       font-size: 2.25em;
    }
 
-   .L-button {
+   .callRepair-container {
       font-weight: 600;
       font-size: 2.25em;
-   }
-
-   .icon-container {
-      font-size: 1.153em;
-   }
-
-   .title-container {
-      font-size: 1.1em;
    }
 
    .btn-container {
@@ -257,21 +547,17 @@ body {
 }
 
 @media screen and (max-width: 1500px) { 
+   .standard {
+      font-size: 1.025em;
+   }
+
    .language-container {
       font-size: 2em;
    }
 
-   .L-button {
+   .callRepair-container {
       font-weight: 600;
       font-size: 2em;
-   }
-
-   .icon-container {
-      font-size: 1.025em;
-   }
-
-   .title-container {
-      font-size: 0.975em;
    }
 
    .btn-container {
@@ -280,22 +566,17 @@ body {
 }
 
 @media screen and (max-width: 1300px) { 
-   .language-container {
-      margin: 1em;
-      font-size: 1.8em;
-   }
-
-   .L-button {
-      font-weight: 600;
-      font-size: 1.8em;
-   }
-
-   .icon-container {
+   .standard {
       font-size: 0.925em;
    }
 
-   .title-container {
-      font-size: 0.88em;
+   .language-container {
+      font-size: 1.8em;
+   }
+
+   .callRepair-container {
+      font-weight: 600;
+      font-size: 1.8em;
    }
 
    .btn-container {
@@ -304,21 +585,16 @@ body {
 }
 
 @media screen and (max-width: 1200px) { 
-   .language-container {
-      /* margin: 1.05em; */
-      font-size: 1.635em;
-   }
-
-   .L-button {
-      font-size: 1.635em;
-   }
-
-   .icon-container {
+   .standard {
       font-size: 0.84em;
    }
 
-   .title-container {
-      font-size: 0.8em;
+   .language-container { 
+      font-size: 1.635em;
+   }
+
+   .callRepair-container {
+      font-size: 1.635em;
    }
 
    .btn-container {
@@ -328,38 +604,23 @@ body {
 }
 
 @media screen and (max-width: 1100px) { 
-   .page-L {
-      width: 33.35%;
+   .standard {
+      font-size: 0.74em;
    }
-
-   .title { 
-      font-size: 4.05em;
+   
+   .page-L {
+      width: 50%;
    }
 
    .language-container {
       font-size: 1.435em;
    }
 
-   .L-button {
+   .callRepair-container {
       font-size: 1.435em;
-   }
-
-   .page-R {
-      width: 66.65%;
-      font-size: 10px;
-   }
-
-   .icon-container {
-      font-size: 0.74em;
-   }
-
-   .title-container {
-      font-size: 0.95em;
    }
    
    .btn-container {
       font-size: 0.68em;
    }
-
 }
-
