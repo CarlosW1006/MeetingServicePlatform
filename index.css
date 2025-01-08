@@ -1,5 +1,5 @@
 .notify { 
-   width: 30em;
+   width: 80em;
    height: auto;
    z-index: 999;
    padding: 1.5em;
@@ -19,24 +19,47 @@
    margin-bottom: 25px;
 }
 
-.close-btn {
-   cursor: pointer;
-   margin-left: auto;
-   margin-right: 0;
-   margin-bottom: 1em;
-}
-
-.close-btn:hover {
-   color: #dc3434;
-}
-
 .accept-btn { 
    cursor: pointer;
+   width: 5em;
    padding: 10px;
    font-weight: 600;
    color: #FFFFFF;
    border-radius: 10px;
    background-color: #fa9d50;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.accept-btn:hover { 
+   background-color: #e6802c;
+}
+
+.disAccept-btn {
+   cursor: pointer;
+   width: 5em;
+   padding: 10px;
+   font-weight: 600;
+   color: #FFFFFF;
+   margin-left: 6em;
+   border-radius: 10px;
+   background-color: #df4b4b;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.disAccept-btn:hover { 
+   background-color: #c33e3e;
+}
+
+.acceptBtn-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 * {
@@ -253,9 +276,10 @@ body {
 }
 
 .inner-btn-en { 
-   width: 10em;
-   padding: 0.15em 0.15em 0.15em;
-   font-size: 1.25em;
+   width: 11em;
+   padding: 0.15em;
+   padding-left: 0.75em;
+   font-size: 1.2em;
    font-weight: 600;
    border-radius: 30px;
 
@@ -265,9 +289,6 @@ body {
    background-color: #FFFFFF;
    border:#FFFFFF 2.5px solid;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
 }
 
 .inner-btn-en:hover { 
