@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>臺北市立圖書館 視訊服務臺</title>
+   <link rel="stylesheet" href="index.css">
+   <script src="./alert.js"></script>
+   <link rel="icon" href="./image/logo2.png" type="image/x-icon">
+</head>
+<body>
+   <section>
+      <img class="bg" src="./image/bg2.png">
+
+      <div class="language-container">
+         <a class="lang-t">繁體中文</a>
+         <a class="lang-eng" href="./index_en.html">English</a>
+      </div>
+
+      <a href="https://topmeetingrtc.topoo.com.tw/10" target="_blank">
+         <img class="maintenance-t-btn" src="./image/maintenance-t.png">
+      </a>
+
+      <!-- 放樓層變數 -->
+      <p class="floor">總館一樓</p>
+
+      <div class="btn-container">
+         <div class="btn-outline">
+            <div class="btn-bg">
+               <div class="btn-title">
+                  <p>新辦證讀者</p>
+               </div>
+
+               <div class="inner-btn-container">
+                  <a href="https://book.tpml.edu.tw/register" target="_blank" class="inner-btn-t">步驟1 資料填寫</a>
+                  <a id="verify-btn" class="inner-btn-t">步驟2 資料核對</a>
+               </div>
+            </div>
+         </div>
+         <div class="btn-outline">
+            <div class="btn-bg">
+               <div class="btn-title">
+                  <p>已辦證讀者</p>
+               </div>
+
+               <div class="inner-btn-container">
+                  <a id="renewExtension-btn" class="inner-btn2-t">展期更新</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="web-notify" class="notify">
+         <p>
+            歡迎您使用臺北市立圖書館視訊服務系統，為維護服務品質，本館將於過程中錄製視訊與音訊，
+            錄製內容僅用於身份核對及服務紀錄，敬請安心使用。
+         </p>
+   
+         <p>
+            Welcome to the Taipei Public Library Video Service System. To ensure service quality, 
+            the library will record video and audio during the process. The recorded content will 
+            only be used for identity verification and service records. Please feel assured while 
+            using our services.
+         </p>
+   
+         <div class="acceptBtn-container flex-container">
+            <a id="accept-btn" class="accept-btn">同意</a>
+            <a id="close-btn" class="disAccept-btn">不同意</a>
+         </div>
+      </div>
+  </section>
+</body>
+</html>
