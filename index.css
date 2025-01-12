@@ -8,7 +8,7 @@ body {
    position: absolute;
    z-index: -1;
    width: 100vw;
-   height: 100%;
+   height: auto;
 }
 
 section {
@@ -41,14 +41,14 @@ section {
 .maintenance-t-btn {
    position: absolute;
    right: 0;
-   margin: 88vh 17.5vw 0vh;
+   margin: 44.5% 17.5vw 0%;
    height: 3vw;
 }
 
 .maintenance-en-btn {
    position: absolute;
    right: 0;
-   margin: 88vh 11.5vw 0vh;
+   margin: 44.5% 17.5vw 0%;
    height: 3vw;
 }
 
@@ -60,7 +60,7 @@ section {
 .floor {
    font-weight: 600;
    font-size: 3.5vw;
-   margin: 50vh 7vw 0vh;
+   margin: 26% 7vw 0%;
 }
 
 .btn-outline {
@@ -68,7 +68,7 @@ section {
    align-items: center;
    justify-content: center;
    position: relative;
-   margin-top: 10vh;
+   margin-top: 5%;
    width: 15.75vw;
    height: 11.5vw;
    background-color: #FFBB69;
