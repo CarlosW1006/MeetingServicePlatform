@@ -1,0 +1,142 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   font-size: 10px;
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: relative;
+}
+
+/* 背景固定在後面 */
+.background {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: -1;
+
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-image: url('./image/background.png');
+}
+
+section {
+   display: flex;
+   padding: 2em 1em;
+   min-height: 100vh;
+   justify-content: center;
+}
+
+.form-area {
+   width: 60em;
+   padding: 2em;
+   font-size: 10px;
+   border-radius: 1em;
+   background-color: #FFFFFF;
+   box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.topoo_logo {
+   width: 20em;
+   margin: 2.5vh;
+}
+
+.form-container {
+   font-size: 10px;
+   margin-top: 5em;
+
+   display: flex;
+   align-items: center; 
+   justify-content: center;
+}
+
+.form {
+   width: 60%;
+   margin: 1.5em 0 5.5em;
+   
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.title { 
+   width: 97%;
+   color: #4BBCBC;
+   margin-bottom: 2em;
+}
+
+.form input, .form select {
+   width: 100%;
+   height: 3em;
+   outline: none;
+   color: #a8a8a8;
+   font-size: 1.75em;
+   margin-top: 1.5em;
+   text-indent: 20px;
+   border-radius: 0.5em;
+   box-sizing: content-box;
+   border: 1.5px solid #a8a8a8;
+}
+
+.form select {
+   -webkit-appearance: none;
+   appearance: none;
+   -moz-appearance: none;
+   background-repeat: no-repeat;
+   background-size: 14px 14px;
+   background-position: calc(100% - 16px);
+   background-image: url('https://www.svgrepo.com/show/80156/down-arrow.svg');
+}
+
+.form input:hover, .form select:hover, form input:focus, .form select:focus {
+   border: 1.5px solid #4BBCBC;
+}
+
+.form button {
+   width: 50%;
+   height: 3em;
+   border: none;
+   color: #FFFFFF;
+   font-size: 1.75em;
+   margin-top: 1.5em;
+   border-radius: 0.5em;
+   align-self: flex-start;
+   background-color: #4BBCBC;
+}
+
+.form button:hover { 
+   background-color: rgb(95, 215, 215);
+}
+
+@media screen and (max-width: 500px) { 
+   body {
+      background-size: cover;
+      background-position: center;
+      background-image: url('./image/background.png');
+   }
+
+   .background {
+      display: block;
+   }
+   
+   .form-area {
+      width: 100%;
+      margin-top: 7.5em;
+      overflow-y: hidden;
+      margin-bottom: -10em;
+      border-top-left-radius: 2.5em;
+      border-top-right-radius: 2.5em;
+      border-radius: 2.5em 2.5em 0 0;
+   }
+
+   .form {
+      width: 80%;
+   }
+}

@@ -3,71 +3,168 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>臺北市立圖書館 視訊服務臺</title>
+   <title>TOPMeeting全球行動視訊會議</title>
    <link rel="stylesheet" href="index.css">
-   <script src="./alert.js"></script>
+   <!-- <script src="./alert.js"></script> -->
    <link rel="icon" href="./image/logo2.png" type="image/x-icon">
+   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+
 </head>
 <body>
-   <section class="bg">
-      <img class="bg" src="./image/bg2.png">
+   <section>
+      <!-- <div class="header"> -->
+         <div class="bg-theme mask"><div class="mask">
+            <div class="header-top">
+               <img class="topoo_logo" src="./image/Topoo_logo.png"><i class="mdi mdi-menu menu"></i>
+               <div class="account"><p>值班人員</p><i class="mdi mdi-logout icon"></i></div>
+            </div>
+            <div class="title">
+               <span>臺北市立圖書館&nbsp;&nbsp;全球行動視訊會議系統</span>
+            </div>
+            </div>
+         </div></div>
+      <!-- </div> -->
 
-      <div class="language-container">
-         <a class="lang-t">繁體中文</a>
-         <a class="lang-eng" href="./index_en.html">English</a>
-      </div>
+      <div class="body-container">
+         <div class="side-bar">
+            <div class="bar-container">
+               <p>正在使用會議數量(0/8)</p>
+               <p>目前同時上線數量(0/100)</p>
+               <button class="recording-records">檢視錄影檔</button>
 
-      <a href="https://topmeetingrtc.topoo.com.tw/10" target="_blank">
-         <img class="maintenance-t-btn" src="./image/maintenance-t.png">
-      </a>
+               <div class="receive-records">
+                  <p class="receive-count">視訊服務數量(未接2/已接3)</p>
+                  <div class="receive-record refuse">
+                     <p>*總館一樓/展期服務 未接</p>
+                     <p>2025/04/16 10:00</p>
+                  </div>
 
-      <!-- 放樓層變數 -->
-      <p class="floor">總館一樓</p>
+                  <div class="receive-record refuse">
+                     <p>*總館一樓/展期服務 未接</p>
+                     <p>2025/04/16 15:00</p>
+                  </div>
 
-      <div class="btn-container">
-         <div class="btn-outline">
-            <div class="btn-bg">
-               <div class="btn-title">
-                  <p>新辦證讀者</p>
-               </div>
+                  <div class="receive-record accept">
+                     <p>*總館一樓/展期服務 已接</p>
+                     <p>2025/04/16 12:00</p>
+                  </div>
 
-               <div class="inner-btn-container">
-                  <a href="https://book.tpml.edu.tw/register" target="_blank" class="inner-btn-t">步驟1 資料填寫</a>
-                  <a id="verify-btn" class="inner-btn-t">步驟2 資料核對</a>
+                  <div class="receive-record accept">
+                     <p>*總館一樓/展期服務 已接</p>
+                     <p>2025/04/16 13:00</p>
+                  </div>
+                  
+                  <div class="receive-record accept">
+                     <p>*總館一樓/展期服務 已接</p>
+                     <p>2025/04/16 14:00</p>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="btn-outline">
-            <div class="btn-bg">
-               <div class="btn-title">
-                  <p>已辦證讀者</p>
+
+         <div class="right-container">
+            <div class="meeting-row">
+               <div class="search-wrapper">
+                  <input type="text" class="search-field" placeholder="搜尋...">
+                  <i class="mdi mdi-magnify search-logo"></i>
+               </div>
+               
+               <div class="meeting-col">
+                  <div class="meeting-container">
+                     <div class="meeting-bg"></div>
+                     <div class="info-container">
+                        <div class="flex">
+                           <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
+                        </div>
+                        <div class="flex">
+                           <p class="meet-field">會議公告</p><p class="meet-info">本次會議主題為 [會議主題]，請準時出席，
+                           事先準備相關資料。如有任何問題，請聯繫陳ＯＯ秘書。</p>
+                        </div>
+                     </div>
+
+                     <div class="meet-btn flex">
+                        <button class="join-btn">參加會議</button>
+                        <button class="invite-btn">邀請參加</button>
+                     </div>
+                  </div>
+
+                  <div class="meeting-container">
+                     <div class="meeting-bg"></div>
+                     <div class="info-container">
+                        <div class="flex">
+                           <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
+                        </div>
+                        <div class="flex">
+                           <p class="meet-field">會議公告</p><p class="meet-info">本次會議主題為 [會議主題]，請準時出席，
+                           事先準備相關資料。如有任何問題，請聯繫陳ＯＯ秘書。</p>
+                        </div>
+                     </div>
+
+                     <div class="meet-btn flex">
+                        <button class="join-btn">參加會議</button>
+                        <button class="invite-btn">邀請參加</button>
+                     </div>
+                  </div>
+
+                  <div class="meeting-container">
+                     <div class="meeting-bg"></div>
+                     <div class="info-container">
+                        <div class="flex">
+                           <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
+                        </div>
+                        <div class="flex">
+                           <p class="meet-field">會議公告</p><p class="meet-info">本次會議主題為 [會議主題]，請準時出席，
+                           事先準備相關資料。如有任何問題，請聯繫陳ＯＯ秘書。</p>
+                        </div>
+                     </div>
+
+                     <div class="meet-btn flex">
+                        <button class="join-btn">參加會議</button>
+                        <button class="invite-btn">邀請參加</button>
+                     </div>
+                  </div>
+
+                  <div class="meeting-container">
+                     <div class="meeting-bg"></div>
+                     <div class="info-container">
+                        <div class="flex">
+                           <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
+                        </div>
+                        <div class="flex">
+                           <p class="meet-field">會議公告</p><p class="meet-info">本次會議主題為 [會議主題]，請準時出席，
+                           事先準備相關資料。如有任何問題，請聯繫陳ＯＯ秘書。</p>
+                        </div>
+                     </div>
+
+                     <div class="meet-btn flex">
+                        <button class="join-btn">參加會議</button>
+                        <button class="invite-btn">邀請參加</button>
+                     </div>
+                  </div>
+
+                  <div class="meeting-container">
+                     <div class="meeting-bg"></div>
+                     <div class="info-container">
+                        <div class="flex">
+                           <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
+                        </div>
+                        <div class="flex">
+                           <p class="meet-field">會議公告</p><p class="meet-info">本次會議主題為 [會議主題]，請準時出席，
+                           事先準備相關資料。如有任何問題，請聯繫陳ＯＯ秘書。</p>
+                        </div>
+                     </div>
+
+                     <div class="meet-btn flex">
+                        <button class="join-btn">參加會議</button>
+                        <button class="invite-btn">邀請參加</button>
+                     </div>
+                  </div>
                </div>
 
-               <div class="inner-btn-container">
-                  <a id="renewExtension-btn" class="inner-btn2-t">展期更新</a>
-               </div>
             </div>
          </div>
       </div>
-
-      <div id="web-notify" class="notify">
-         <p>
-            歡迎您使用臺北市立圖書館視訊服務系統，為維護服務品質，本館將於過程中錄製視訊與音訊，
-            錄製內容僅用於身份核對及服務紀錄，敬請安心使用。
-         </p>
-   
-         <p>
-            Welcome to the Taipei Public Library Video Service System. To ensure service quality, 
-            the library will record video and audio during the process. The recorded content will 
-            only be used for identity verification and service records. Please feel assured while 
-            using our services.
-         </p>
-   
-         <div class="acceptBtn-container flex-container">
-            <a id="accept-btn" class="accept-btn">同意</a>
-            <a id="close-btn" class="disAccept-btn">不同意</a>
-         </div>
-      </div>
-  </section>
+      
+   </section>
 </body>
 </html>
