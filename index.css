@@ -8,6 +8,10 @@ body {
    font-size: 10px;
 }
 
+section {
+   min-height: 100vh;
+}
+
 .flex {
    display: flex;
 }
@@ -18,7 +22,7 @@ body {
    background: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6));
 }
 
-.bg-theme {
+.header {
    width: 100vw;
    min-height: 20em;
    position: relative;
@@ -89,7 +93,7 @@ body {
 .side-bar {
    width: 20vw;
    font-size: 10px;
-   min-height: 100vh;
+   min-height: 100%;
    margin: 1.5vw 0 1.5vw;
    background-color: #FFFFFF;
    border-right: solid 0.15vw #a5a5a5;
@@ -154,7 +158,7 @@ body {
    width: 80vw;
 }
 
-.meeting-row {
+.meeting-row { 
    background-color: #FFFFFF;
 }
 
@@ -325,6 +329,49 @@ body {
    -webkit-box-orient: vertical; 
 }
 
+/* 頁數按鈕 不需要可移除 */
+
+.pagination-container { 
+   margin-right: 2vw;
+   margin-bottom: 2vw;
+   align-items: center;
+   justify-content: flex-end;
+   
+}
+
+.pagination-container p { 
+   font-size: 1vw;
+   margin: 0.75vw;
+}
+
+.pagination-container button { 
+   padding: 1vw;
+   border: none;
+   margin: 0.75vw;
+   font-size: 1vw;
+   border-radius: 0.75vw;
+   background-color: #b9b9e9;
+}
+
+.pagination-container button:hover,
+.pagination-container button:focus { 
+   color: #FFFFFF;
+   background-color: #8382C6;
+}
+
+.pagination-container2 { 
+   display: none;
+}
+
+.footer {
+   border-top: solid 0.15vw #e6e6e6;
+}
+
+.footer p {
+   margin: 1vw;
+   font-size: 1vw;
+}
+
 /* 中等裝置：2欄 */
 @media screen and (max-width: 1200px) {
    .meeting-container { 
@@ -347,7 +394,7 @@ body {
 }
 
 /* 手機裝置：1欄 */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
    .topoo_logo {
       display: none;
    }
@@ -411,5 +458,45 @@ body {
       margin-left: 1.05em;
       font-size: 1.75vw;
       border-radius: 0.25em;
+   }
+
+   /* 頁數按鈕 不需要可移除 */
+
+   .pagination-container { 
+      display: none;
+   }
+
+   .pagination-container2 {
+      display: flex; 
+      margin-right: 2vw;
+      margin-bottom: 2vw;
+      align-items: center;
+      justify-content: center;
+      
+   }
+   
+   .pagination-container2 p { 
+      font-size: 2.5vw;
+      margin: 0.75vw;
+   }
+   
+   .pagination-container2 button { 
+      padding: 1vw;
+      border: none;
+      margin: 0.75vw;
+      font-size: 2.5vw;
+      border-radius: 0.75vw;
+      background-color: #b9b9e9;
+   }
+   
+   .pagination-container2 button:hover, 
+   .pagination-container2 button:focus { 
+      color: #FFFFFF;
+      background-color: #8382C6;
+   }
+   
+   .footer p {
+      margin: 3vw;
+      font-size: 2vw;
    }
 }
