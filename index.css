@@ -88,6 +88,7 @@ section {
 
 .body-container {
    display: flex;
+   position: relative;
 }
 
 .side-bar {
@@ -413,19 +414,20 @@ section {
       min-width: 95.75%;
    }
 
+   /* 點選左上選單展開左側列 */
    .side-bar {
-      /* width: 60vw;
-      z-index: 9999; */
-      display: none;
+      width: 60vw;
+      position: absolute;
    }
 
    .bar-container p {
-      font-size: 2.5vw;
+      font-size: 3.5vw;
+      margin-top: 2.5vw;
    }
 
    .recording-records {
       width: 100%;
-      font-size: 2.5vw;
+      font-size: 3.5vw;
    }
 
    .right-container {
