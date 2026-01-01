@@ -13,14 +13,51 @@
       <div class="form-area">
          <img class="topoo_logo" src="./image/Topoo_logo.png">
          <div class="form-container">
-            <form class="form" method="post">
+            <form class="form" method="post" id="form">
                <img class="title" src="./image/title.png">
-               <input type="text" placeholder="請輸入帳號">
-               <input type="password" placeholder="請輸入密碼">
-               <select>
-                  <option>網域</option>
-               </select>
-               <button type="submit">登入</button>
+               <div class="row2">
+                  <p>使用者帳號</p>
+                  <div class="flex">
+                     <input type="text" autocomplete="username">
+                     <div class="icon">
+                        <i class="mdi mdi-account-outline"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row2">
+                  <p>使用者密碼</p>
+                  <div class="flex">
+                     <input type="password" autocomplete="current-password">
+                     <div class="icon">
+                        <i class="mdi mdi-lock-outline"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- <div class="row flex">
+                  <div class="icon">
+                     <i class="mdi mdi-account-outline"></i>
+                  </div>
+                  <input type="text" placeholder="請輸入帳號">
+               </div>
+               
+               <div class="row flex">
+                  <div class="icon">
+                     <i class="mdi mdi-lock-outline"></i>
+                  </div>
+                  <input type="password" placeholder="請輸入密碼">
+               </div>  -->
+
+               <div class="row flex">
+                  <div class="icon">
+                     <i class="mdi mdi-web"></i>
+                  </div>
+                  <select>
+                     <option>網域</option>
+                  </select>
+               </div>
+               <button type="button">登入</button>
             </form>
          </div>
       </div>
@@ -31,3 +68,15 @@
   </section>
 </body>
 </html>
+
+<script>
+   var input = document.getElementById("form");
+
+   // Execute a function when the user presses a key on the keyboard
+   input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+         console.log(123);
+      }
+   });
+</script>

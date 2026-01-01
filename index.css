@@ -64,8 +64,10 @@ section {
 }
 
 .account .icon {
-   padding-top: 0.25em;
+   display: flex;
    margin-left: 1em;
+   align-items: center;
+   justify-content: center;
 }
 
 .title {
@@ -95,7 +97,7 @@ section {
    width: 20vw;
    font-size: 10px;
    min-height: 100%;
-   margin: 1.5vw 0 1.5vw;
+   margin: 2vw 0 1.5vw;
    background-color: #FFFFFF;
    border-right: solid 0.15vw #a5a5a5;
 
@@ -174,7 +176,7 @@ section {
    display: flex;
    border-radius: 10em;
    
-   margin: 1.5vw 2.5vw 0.5vw;
+   margin: 2vw 2.5vw 0.5vw;
    width: calc(33.333% - 3.5vw);
    background-color: #eaeaea;
 }
@@ -191,9 +193,12 @@ section {
 }
 
 .search-logo { 
+   display: flex;
    font-size: 1vw;
    margin-left: auto;
    border-radius: 10em;
+   align-items: center;
+   justify-content: center;
    padding: 1.25em 1.25em;
 }
 
@@ -206,6 +211,7 @@ section {
    min-width: 250px;
    font-size: 10px;
    margin: 1.5vw 1.25vw;
+   position: relative;
    box-sizing: border-box;
    background-color: #FFFFFF;
    width: calc(33.333% - 2.5vw);
@@ -220,7 +226,7 @@ section {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   background-image: url('./image/meeting-theme.png');
+   background-image: url('./image/meeting-bg.png');
 }
 
 .info-container {
@@ -373,6 +379,24 @@ section {
    font-size: 1vw;
 }
 
+.join_num { 
+   top: 0;
+   right: 0;
+   padding: 0.5vw;
+   min-width: 5vw;
+   display: flex;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   background-color: #FF0000;
+   border-top-right-radius: 0.5vw;
+}
+
+.join_num p {
+   font-size: 1vw;
+   color: #FFFFFF;
+}
+
 /* 中等裝置：2欄 */
 @media screen and (max-width: 1200px) {
    .meeting-container { 
@@ -392,10 +416,31 @@ section {
       font-size: 1vw;
       border-radius: 0.25em;
    }
+
+   .join_num { 
+      padding: 0.85vw;
+      min-width: 7.25vw;
+   }
+   
+   .join_num p {
+      font-size: 1.25vw;
+   }
 }
 
 /* 手機裝置：1欄 */
 @media screen and (max-width: 720px) {
+   .side-bar {
+      width: 60vw;
+      min-height: 99%;
+      position: absolute;
+      left: -100vw; /* 預設隱藏在左側螢幕外 */
+      transition: left 0.3s;
+      z-index: 1000;
+   }
+   .side-bar.open {
+      left: 0; /* 展開時顯示 */
+   }
+
    .topoo_logo {
       display: none;
    }
@@ -409,6 +454,10 @@ section {
       
    }
 
+   .right-container {
+      min-height: 100vh;
+   }
+
    .meeting-container {
       height: 55vw;
       min-width: 95.75%;
@@ -417,6 +466,7 @@ section {
    /* 點選左上選單展開左側列 */
    .side-bar {
       width: 60vw;
+      min-height: 99%;
       position: absolute;
    }
 
@@ -450,7 +500,7 @@ section {
    }
 
    .info-container p {
-      font-size: 2.15vw;
+      font-size: 2.5vw;
    }
 
    .meet-btn button { 
@@ -463,12 +513,20 @@ section {
    }
 
    /* 頁數按鈕 不需要可移除 */
-
-   .pagination-container { 
-      display: none;
+   .pagination-container {
+      justify-content: center;
+   }
+   .pagination-container button,
+   .pagination-container p {
+      font-size: 2.5vw;
+      margin: 0.75vw;
    }
 
-   .pagination-container2 {
+   /* .pagination-container { 
+      display: none;
+   } */
+
+   /* .pagination-container2 {
       display: flex; 
       margin-right: 2vw;
       margin-bottom: 2vw;
@@ -495,10 +553,20 @@ section {
    .pagination-container2 button:focus { 
       color: #FFFFFF;
       background-color: #8382C6;
-   }
+   } */
    
    .footer p {
       margin: 3vw;
       font-size: 2vw;
+   }
+
+   .join_num { 
+      padding: 1.5vw;
+      min-width: 12.5vw;
+   }
+   
+   .join_num p {
+      font-size: 2vw;
+      color: #FFFFFF;
    }
 }

@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TOPMeeting全球行動視訊會議</title>
    <link rel="stylesheet" href="index.css">
-   <link rel="icon" href="./image/logo2.png" type="image/x-icon">
+   <link rel="icon" href="./image/tpl_logo.png" type="image/x-icon">
    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
 
 </head>
@@ -13,49 +13,21 @@
    <section>
       <div class="header mask"><div class="mask">
          <div class="header-top">
-            <img class="topoo_logo" src="./image/Topoo_logo.png"><i class="mdi mdi-menu menu"></i>
+            <img class="topoo_logo" src="./image/Topoo_logo.png"><i class="mdi mdi-menu menu" id="menuBtn"></i>
             <div class="account"><p>值班人員</p><i class="mdi mdi-logout icon"></i></div>
          </div>
          <div class="title">
-            <span>臺北市立圖書館&nbsp;&nbsp;視訊服務臺</span>
+            <span>TOPMeeting&nbsp;&nbsp;全球行動視訊會議系統</span>
          </div>
          </div>
       </div></div>
 
       <div class="body-container">
-         <div class="side-bar">
+         <div class="side-bar" id="sidebar">
             <div class="bar-container">
                <p>正在使用會議數量(0/8)</p>
                <p>目前同時上線數量(0/100)</p>
                <button class="recording-records">檢視錄影檔</button>
-
-               <div class="receive-records">
-                  <p class="receive-count">視訊服務數量(未接2/已接3)</p>
-                  <div class="receive-record refuse">
-                     <p>*總館一樓/展期服務 未接</p>
-                     <p>2025/04/16 10:00</p>
-                  </div>
-
-                  <div class="receive-record refuse">
-                     <p>*總館一樓/展期服務 未接</p>
-                     <p>2025/04/16 15:00</p>
-                  </div>
-
-                  <div class="receive-record accept">
-                     <p>*總館一樓/展期服務 已接</p>
-                     <p>2025/04/16 12:00</p>
-                  </div>
-
-                  <div class="receive-record accept">
-                     <p>*總館一樓/展期服務 已接</p>
-                     <p>2025/04/16 13:00</p>
-                  </div>
-                  
-                  <div class="receive-record accept">
-                     <p>*總館一樓/展期服務 已接</p>
-                     <p>2025/04/16 14:00</p>
-                  </div>
-               </div>
             </div>
          </div>
 
@@ -69,6 +41,7 @@
                <div class="meeting-col">
                   <div class="meeting-container">
                      <div class="meeting-bg"></div>
+                     <div class="join_num"><p>0/10</p></div>
                      <div class="info-container">
                         <div class="flex">
                            <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
@@ -87,6 +60,7 @@
 
                   <div class="meeting-container">
                      <div class="meeting-bg"></div>
+                     <div class="join_num"><p>0/10</p></div>
                      <div class="info-container">
                         <div class="flex">
                            <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
@@ -105,6 +79,7 @@
 
                   <div class="meeting-container">
                      <div class="meeting-bg"></div>
+                     <div class="join_num"><p>0/10</p></div>
                      <div class="info-container">
                         <div class="flex">
                            <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
@@ -123,6 +98,7 @@
 
                   <div class="meeting-container">
                      <div class="meeting-bg"></div>
+                     <div class="join_num"><p>0/10</p></div>
                      <div class="info-container">
                         <div class="flex">
                            <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
@@ -141,6 +117,7 @@
 
                   <div class="meeting-container">
                      <div class="meeting-bg"></div>
+                     <div class="join_num"><p>0/10</p></div>
                      <div class="info-container">
                         <div class="flex">
                            <p class="meet-field">會議名稱</p><p class="meet-name">總館一樓服務臺</p>
@@ -161,18 +138,79 @@
          </div>
       </div>
    </section>
+
+   <div id="pagination" class="pagination-container flex"></div>
    
-   <div class="pagination-container flex">  <!-- 寬度 720px 以上顯示5個按鈕 -->
+   <!-- 寬度 720px 以上顯示5個按鈕 -->
+   <!-- <div class="pagination-container flex">  
       <p>&lt;</p><button>01</button><button>02</button><button>03</button>
       <button>04</button><p>．．．</p><button>10</button><p>&gt;</p>
-   </div>
+   </div> -->
 
-   <div class="pagination-container2 flex"> <!-- 寬度 720px 以下顯示1個按鈕 -->
+   <!-- 寬度 720px 以下顯示1個按鈕 -->
+   <!-- <div class="pagination-container2 flex">
       <p>&lt;</p><button>01</button><p>&gt;</p>
-   </div>
+   </div> -->
 
    <div class="footer">
       <p>Copyright © 2025 泰溥科技</p>
    </div>
 </body>
 </html>
+
+<script>
+   document.getElementById('menuBtn').onclick = function() {
+     document.getElementById('sidebar').classList.toggle('open');
+   };
+
+   function renderPagination(current, total) {
+      const container = document.getElementById('pagination');
+      container.innerHTML = '';
+   
+      // 判斷螢幕寬度
+      const isMobile = window.innerWidth <= 720;
+   
+      // 左箭頭
+      const prev = document.createElement('p');
+      prev.textContent = '<';
+      container.appendChild(prev);
+
+      if (isMobile) {
+         // 只顯示目前頁
+         const btn = document.createElement('button');
+         btn.textContent = String(current).padStart(2, '0');
+         container.appendChild(btn);
+      } else {
+      // 顯示多個頁碼
+      for (let i = 1; i <= Math.min(total, 4); i++) {
+         const btn = document.createElement('button');
+         btn.textContent = String(i).padStart(2, '0');
+         container.appendChild(btn);
+      }
+         if (total > 5) {
+            const dots = document.createElement('p');
+            dots.textContent = '．．．';
+            container.appendChild(dots);
+
+            const lastBtn = document.createElement('button');
+            lastBtn.textContent = String(total).padStart(2, '0');
+            container.appendChild(lastBtn);
+         } else if (total === 5) {
+            const btn = document.createElement('button');
+            btn.textContent = '05';
+            container.appendChild(btn);
+         }
+      }
+   
+      // 右箭頭
+      const next = document.createElement('p');
+      next.textContent = '>';
+      container.appendChild(next);
+   }
+   
+   // 初始渲染
+   renderPagination(1, 5);
+   
+   // 螢幕大小改變時自動重繪
+   window.addEventListener('resize', () => renderPagination(1, 5));
+</script>
